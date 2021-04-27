@@ -84,7 +84,7 @@
     "cookiesAlert": false,
     "gdpr": false,
     "pwa-switcher": false,
-    "uniqCompNum": 84,
+    "uniqCompNum": 91,
     "versionPublish": "5.3.0",
     "screenshot": "screenshot.png"
   },
@@ -1345,6 +1345,33 @@
           "_params": {}
         },
         {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-section-title": {
+              "color": "#9fdbf8"
+            }
+          },
+          "_name": "content4",
+          "_sourceTheme": "mobirise5",
+          "_customHTML": "<section class=\"content4\" group=\"Content\" data-bg-video=\"{{bg.type == 'video'&&bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"4\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"1\" condition=\"fullScreen == false\">\n        <input type=\"range\" name=\"textWidth\" title=\"Width\" min=\"4\" max=\"12\" step=\"1\" value=\"10\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#032f50\" selected>\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"title col-md-12 col-lg-{{textWidth}}\">\n                <h3 class=\"mbr-section-title mbr-fonts-style align-center mb-4\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-2\">\n                    <b>Our Allies</b></h3>\n                <h4 class=\"mbr-section-subtitle align-center mbr-fonts-style mb-4\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\">\n                    You can arrange your articles with the Mobirise website design software.\n                </h4>\n                <div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\">\n                    <a class=\"btn btn-primary\" href=\"https://mobiri.se\">LEARN MORE</a>\n                    <a class=\"btn btn-primary-outline\" href=\"https://mobiri.se\">LIVE DEMO</a>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "svKgnwlAQ8",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "content4-2d"
+        },
+        {
           "alias": "mobirise4-blocks/components",
           "_isSecondary": true,
           "typeCompatible": "type",
@@ -1370,7 +1397,7 @@
               },
               "img": {
                 "width": "auto",
-                "height": "90px",
+                "height": "64px",
                 "padding-bottom": "0",
                 "& when (@grayFilter)": {
                   "-webkit-filter": "grayscale(100%)",
@@ -1394,17 +1421,286 @@
               }
             },
             ".mbr-section-title": {
-              "color": "#9fdbf8"
+              "color": "#9fdbf8",
+              "text-align": "center"
             }
           },
           "_name": "extInfo1",
           "_sourceTheme": "mobirise5",
-          "_customHTML": "<section class=\"extInfo\" group=\"Additional Blocks\" data-bg-video=\"{{bg.type == 'video'&&bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!--Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"6\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"6\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Gray Filter\" name=\"grayFilter\">\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/background1.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#032f50\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#e4e5fb\" condition=\"overlay&&bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay&&bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay&&bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container\" mbr-class=\"{'container-fluid':fullWidth, container:fullWidth==false}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-12 col-md-12\" mbr-if=\"showTitle || showSubtitle\">\n                <h3 class=\"mbr-section-subtitle mbr-fonts-style pb-2 mbr-light align-center\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-class=\"{'pb-4':!showTitle}\">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>\n                <h2 class=\"align-center mbr-fonts-style mbr-section-title\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">Allies</h2>\n            </div>\n\n            <div class=\"col-12 col-md-12\" mbr-class=\"{'pt-4':showTitle}\">\n                <div class=\"row justify-content-center\">\n                    <ul class=\"list-inline align-center\">\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://twitter.com/Meta_Cartel\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/metacartel-238x180.png\" alt=\"MetaCartel\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://twitter.com/MolochDAO\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/moloch-237x179.png\" alt=\"MolochDAO\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://twitter.com/nowdaoit\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/daohaus-238x180.png\" alt=\"DAOhaus\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://twitter.com/Collab_Land_\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/collabland-238x180.png\" alt=\"CollabLand\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://twitter.com/Abridged_io\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/abridged-238x180.png\" alt=\"Abridged\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://twitter.com/RaidGuild\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/raidguild-238x180.png\" alt=\"RaidGuild\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://twitter.com/odyssyautomaton\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/odyssy-238x180.png\" alt=\"Odyssy\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://twitter.com/BrightIDProject\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/brightid-238x180.png\" alt=\"BrightID\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://twitter.com/YoubiCapital\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/youbi-462x180.png\" alt=\"Youbi Capital\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://twitter.com/snzholding\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/snz-238x180.png\" alt=\"SNZ\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://twitter.com/realmaskbook\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/mask-238x180.png\" alt=\"Mask Network\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://twitter.com/IOSGVC\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/iosg-238x180.png\" alt=\"IOSG\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://twitter.com/VentureDAOChina\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/mcvc-238x180.png\" alt=\"MetaCartel Ventures China\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://twitter.com/gbvofficial\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/gbv-460x179.png\" alt=\"GBV\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://www.linkedin.com/company/brcapital/\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/brcapital-462x180.png\" alt=\"BR Capital\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://www.longhashventures.com\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/longhash-462x180.png\" alt=\"Long Hash Ventures\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://www.ngc.fund/\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/ngc-462x180.png\" alt=\"NGC\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"http://www.kucoin.com\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/kucoin-462x180.png\" alt=\"KuCoin\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://sec-bit.github.io/\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/secbit-462x180.png\" alt=\"Secbit\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://doublepeak.io/\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/doublepeak-462x180.png\" alt=\"Double Peak\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://twitter.com/cmsholdings\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/cms-462x180.png\" alt=\"CMS\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"http://crasolum.com\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/crasolum-462x180.png\" alt=\"Crasolum\"></a>\n                        </li>\n                       <li class=\"list-inline-item\">\n                            <a href=\"http://ldcap.com/\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/ldcapital-462x180.png\" alt=\"LD Capital\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://www.src.capital/\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/src-462x180.png\" alt=\"SRC\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://twitter.com/hashglobal\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/hga-238x180.png\" alt=\"Hash Global Advisory\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://twitter.com/ark_stream\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/arkstream-238x93.png\" alt=\"ArkStream\"></a>\n                        </li>\n\n                    </ul>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_customHTML": "<section class=\"extInfo\" group=\"Additional Blocks\" data-bg-video=\"{{bg.type == 'video'&&bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!--Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Gray Filter\" name=\"grayFilter\">\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/background1.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#032f50\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#e4e5fb\" condition=\"overlay&&bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay&&bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay&&bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container\" mbr-class=\"{'container-fluid':fullWidth, container:fullWidth==false}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-12 col-md-12\" mbr-if=\"showTitle || showSubtitle\">\n                <h3 class=\"mbr-section-subtitle mbr-fonts-style pb-2 mbr-light align-center\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-class=\"{'pb-4':!showTitle}\">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>\n                <h2 class=\"align-center mbr-fonts-style mbr-section-title\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">DAO</h2>\n            </div>\n\n            <div class=\"col-12 col-md-12\" mbr-class=\"{'pt-4':showTitle}\">\n                <div class=\"row justify-content-center\">\n                    <ul class=\"list-inline align-center\">\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://twitter.com/Meta_Cartel\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/metacartel-238x180.png\" alt=\"MetaCartel\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://twitter.com/MolochDAO\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/moloch-237x179.png\" alt=\"MolochDAO\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://twitter.com/nowdaoit\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/daohaus-238x180.png\" alt=\"DAOhaus\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://twitter.com/Collab_Land_\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/collabland-238x180.png\" alt=\"CollabLand\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://twitter.com/Abridged_io\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/abridged-238x180.png\" alt=\"Abridged\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://twitter.com/RaidGuild\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/raidguild-238x180.png\" alt=\"RaidGuild\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://twitter.com/odyssyautomaton\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/odyssy-238x180.png\" alt=\"Odyssy\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://twitter.com/BrightIDProject\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/brightid-238x180.png\" alt=\"BrightID\"></a>\n                        </li>\n\n                    </ul>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
           "_JSplaceholders": [],
           "_PHPplaceholders": [],
-          "_anchor": "extInfo1-2b",
+          "_anchor": "extInfo1-2c",
           "_isUserblock": true,
-          "_cid": "sve47EhYaz",
+          "_cid": "svKgbEecOk",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": "mobirise4-blocks/components",
+          "_isSecondary": true,
+          "typeCompatible": "type",
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-section-subtitle": {
+              "color": "#767676"
+            },
+            "ul.list-inline": {
+              "margin": "0",
+              "-webkit-align-self": "center",
+              "align-self": "center",
+              "li": {
+                "margin": "0",
+                "padding": ".5rem"
+              },
+              "img": {
+                "width": "auto",
+                "height": "64px",
+                "padding-bottom": "0",
+                "& when (@grayFilter)": {
+                  "-webkit-filter": "grayscale(100%)",
+                  "-moz-filter": "grayscale(100%)",
+                  "-ms-filter": "grayscale(100%)",
+                  "-o-filter": "grayscale(100%)",
+                  "filter": "gray"
+                },
+                "&:hover": {
+                  "-webkit-filter": "none",
+                  "-moz-filter": "none",
+                  "-ms-filter": "none",
+                  "-o-filter": "none",
+                  "filter": "none"
+                }
+              }
+            },
+            "@media (max-width: 767px)": {
+              ".list-inline-item img": {
+                "width": "auto"
+              }
+            },
+            ".mbr-section-title": {
+              "color": "#9fdbf8",
+              "text-align": "center"
+            }
+          },
+          "_name": "extInfo1",
+          "_sourceTheme": "mobirise5",
+          "_customHTML": "<section class=\"extInfo\" group=\"Additional Blocks\" data-bg-video=\"{{bg.type == 'video'&&bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!--Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Gray Filter\" name=\"grayFilter\">\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/background1.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#032f50\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#e4e5fb\" condition=\"overlay&&bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay&&bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay&&bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container\" mbr-class=\"{'container-fluid':fullWidth, container:fullWidth==false}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-12 col-md-12\" mbr-if=\"showTitle || showSubtitle\">\n                <h3 class=\"mbr-section-subtitle mbr-fonts-style pb-2 mbr-light align-center\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-class=\"{'pb-4':!showTitle}\">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>\n                <h2 class=\"align-center mbr-fonts-style mbr-section-title\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">&nbsp;Investor</h2>\n            </div>\n\n            <div class=\"col-12 col-md-12\" mbr-class=\"{'pt-4':showTitle}\">\n                <div class=\"row justify-content-center\">\n                    <ul class=\"list-inline align-center\">\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://www.hashkeycap.com/\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/hashkey-327x127.png\" alt=\"HASHKEY\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://twitter.com/YoubiCapital\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/youbi-462x180.png\" alt=\"Youbi Capital\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://www.linkedin.com/company/brcapital/\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/brcapital-462x180.png\" alt=\"BR Capital\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://www.ngc.fund/\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/ngc-462x180.png\" alt=\"NGC\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://twitter.com/snzholding\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/snz-238x180.png\" alt=\"SNZ\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://www.alameda-research.com/\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/alameda-169x128.png\" alt=\"Alameda\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://www.src.capital/\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/src-462x180.png\" alt=\"SRC\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://twitter.com/cmsholdings\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/cms-462x180.png\" alt=\"CMS\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://twitter.com/IOSGVC\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/iosg-238x180.png\" alt=\"IOSG\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"http://ldcap.com/\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/ldcapital-462x180.png\" alt=\"LD Capital\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://twitter.com/gbvofficial\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/gbv-460x179.png\" alt=\"GBV\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://twitter.com/ark_stream\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/arkstream-238x93.png\" alt=\"ArkStream\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://doublepeak.io/\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/doublepeak-462x180.png\" alt=\"Double Peak\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://www.longhashventures.com\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/longhash-462x180.png\" alt=\"Long Hash Ventures\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"http://crasolum.com\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/crasolum-462x180.png\" alt=\"Crasolum\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://twitter.com/hashglobal\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/hga-238x180.png\" alt=\"Hash Global Advisory\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://twitter.com/VentureDAOChina\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/mcvc-238x180.png\" alt=\"MetaCartel Ventures China\"></a>\n                        </li>\n                    </ul>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_JSplaceholders": [],
+          "_PHPplaceholders": [],
+          "_anchor": "extInfo1-2f",
+          "_isUserblock": true,
+          "_cid": "svKhmUwg2s",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": "mobirise4-blocks/components",
+          "_isSecondary": true,
+          "typeCompatible": "type",
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-section-subtitle": {
+              "color": "#767676"
+            },
+            "ul.list-inline": {
+              "margin": "0",
+              "-webkit-align-self": "center",
+              "align-self": "center",
+              "li": {
+                "margin": "0",
+                "padding": ".5rem"
+              },
+              "img": {
+                "width": "auto",
+                "height": "64px",
+                "padding-bottom": "0",
+                "& when (@grayFilter)": {
+                  "-webkit-filter": "grayscale(100%)",
+                  "-moz-filter": "grayscale(100%)",
+                  "-ms-filter": "grayscale(100%)",
+                  "-o-filter": "grayscale(100%)",
+                  "filter": "gray"
+                },
+                "&:hover": {
+                  "-webkit-filter": "none",
+                  "-moz-filter": "none",
+                  "-ms-filter": "none",
+                  "-o-filter": "none",
+                  "filter": "none"
+                }
+              }
+            },
+            "@media (max-width: 767px)": {
+              ".list-inline-item img": {
+                "width": "auto"
+              }
+            },
+            ".mbr-section-title": {
+              "color": "#9fdbf8",
+              "text-align": "center"
+            }
+          },
+          "_name": "extInfo1",
+          "_sourceTheme": "mobirise5",
+          "_customHTML": "<section class=\"extInfo\" group=\"Additional Blocks\" data-bg-video=\"{{bg.type == 'video'&&bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!--Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Gray Filter\" name=\"grayFilter\">\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/background1.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#032f50\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#e4e5fb\" condition=\"overlay&&bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay&&bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay&&bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container\" mbr-class=\"{'container-fluid':fullWidth, container:fullWidth==false}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-12 col-md-12\" mbr-if=\"showTitle || showSubtitle\">\n                <h3 class=\"mbr-section-subtitle mbr-fonts-style pb-2 mbr-light align-center\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-class=\"{'pb-4':!showTitle}\">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>\n                <h2 class=\"align-center mbr-fonts-style mbr-section-title\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">Ecosystem</h2>\n            </div>\n\n            <div class=\"col-12 col-md-12\" mbr-class=\"{'pt-4':showTitle}\">\n                <div class=\"row justify-content-center\">\n                    <ul class=\"list-inline align-center\">\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://twitter.com/realmaskbook\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/mask-238x180.png\" alt=\"Mask Network\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://sec-bit.github.io/\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/secbit-462x180.png\" alt=\"Secbit\"></a>\n                        </li>\n\n                    </ul>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_JSplaceholders": [],
+          "_PHPplaceholders": [],
+          "_anchor": "extInfo1-2g",
+          "_isUserblock": true,
+          "_cid": "svKldQ9EMI",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": "mobirise4-blocks/components",
+          "_isSecondary": true,
+          "typeCompatible": "type",
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-section-subtitle": {
+              "color": "#767676"
+            },
+            "ul.list-inline": {
+              "margin": "0",
+              "-webkit-align-self": "center",
+              "align-self": "center",
+              "li": {
+                "margin": "0",
+                "padding": ".5rem"
+              },
+              "img": {
+                "width": "auto",
+                "height": "64px",
+                "padding-bottom": "0",
+                "& when (@grayFilter)": {
+                  "-webkit-filter": "grayscale(100%)",
+                  "-moz-filter": "grayscale(100%)",
+                  "-ms-filter": "grayscale(100%)",
+                  "-o-filter": "grayscale(100%)",
+                  "filter": "gray"
+                },
+                "&:hover": {
+                  "-webkit-filter": "none",
+                  "-moz-filter": "none",
+                  "-ms-filter": "none",
+                  "-o-filter": "none",
+                  "filter": "none"
+                }
+              }
+            },
+            "@media (max-width: 767px)": {
+              ".list-inline-item img": {
+                "width": "auto"
+              }
+            },
+            ".mbr-section-title": {
+              "color": "#9fdbf8",
+              "text-align": "center"
+            }
+          },
+          "_name": "extInfo1",
+          "_sourceTheme": "mobirise5",
+          "_customHTML": "<section class=\"extInfo\" group=\"Additional Blocks\" data-bg-video=\"{{bg.type == 'video'&&bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!--Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Gray Filter\" name=\"grayFilter\">\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/background1.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#032f50\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#e4e5fb\" condition=\"overlay&&bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay&&bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay&&bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container\" mbr-class=\"{'container-fluid':fullWidth, container:fullWidth==false}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-12 col-md-12\" mbr-if=\"showTitle || showSubtitle\">\n                <h3 class=\"mbr-section-subtitle mbr-fonts-style pb-2 mbr-light align-center\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-class=\"{'pb-4':!showTitle}\">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>\n                <h2 class=\"align-center mbr-fonts-style mbr-section-title\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">Media</h2>\n            </div>\n\n            <div class=\"col-12 col-md-12\" mbr-class=\"{'pt-4':showTitle}\">\n                <div class=\"row justify-content-center\">\n                    <ul class=\"list-inline align-center\">\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://www.odaily.com/\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/odaily-169x66.png\" alt=\"ODAILY\"></a>\n                        </li>\n                        \n\n                    </ul>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_JSplaceholders": [],
+          "_PHPplaceholders": [],
+          "_anchor": "extInfo1-2h",
+          "_isUserblock": true,
+          "_cid": "svKlLcf2KL",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": "mobirise4-blocks/components",
+          "_isSecondary": true,
+          "typeCompatible": "type",
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-section-subtitle": {
+              "color": "#767676"
+            },
+            "ul.list-inline": {
+              "margin": "0",
+              "-webkit-align-self": "center",
+              "align-self": "center",
+              "li": {
+                "margin": "0",
+                "padding": ".5rem"
+              },
+              "img": {
+                "width": "auto",
+                "height": "64px",
+                "padding-bottom": "0",
+                "& when (@grayFilter)": {
+                  "-webkit-filter": "grayscale(100%)",
+                  "-moz-filter": "grayscale(100%)",
+                  "-ms-filter": "grayscale(100%)",
+                  "-o-filter": "grayscale(100%)",
+                  "filter": "gray"
+                },
+                "&:hover": {
+                  "-webkit-filter": "none",
+                  "-moz-filter": "none",
+                  "-ms-filter": "none",
+                  "-o-filter": "none",
+                  "filter": "none"
+                }
+              }
+            },
+            "@media (max-width: 767px)": {
+              ".list-inline-item img": {
+                "width": "auto"
+              }
+            },
+            ".mbr-section-title": {
+              "color": "#9fdbf8",
+              "text-align": "center"
+            }
+          },
+          "_name": "extInfo1",
+          "_sourceTheme": "mobirise5",
+          "_customHTML": "<section class=\"extInfo\" group=\"Additional Blocks\" data-bg-video=\"{{bg.type == 'video'&&bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!--Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Gray Filter\" name=\"grayFilter\">\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/background1.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#032f50\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#e4e5fb\" condition=\"overlay&&bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay&&bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay&&bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container\" mbr-class=\"{'container-fluid':fullWidth, container:fullWidth==false}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-12 col-md-12\" mbr-if=\"showTitle || showSubtitle\">\n                <h3 class=\"mbr-section-subtitle mbr-fonts-style pb-2 mbr-light align-center\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-class=\"{'pb-4':!showTitle}\">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>\n                <h2 class=\"align-center mbr-fonts-style mbr-section-title\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">Exchange</h2>\n            </div>\n\n            <div class=\"col-12 col-md-12\" mbr-class=\"{'pt-4':showTitle}\">\n                <div class=\"row justify-content-center\">\n                    <ul class=\"list-inline align-center\">\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://ftx.com/\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/ftx-328x128.png\" alt=\"FTX\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"http://www.kucoin.com\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/kucoin-462x180.png\" alt=\"KuCoin\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://www.okex.com/\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/okex-328x128.png\" alt=\"OKEx\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://www.mxc.com/\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/mxc-328x128.png\" alt=\"MXC\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://www.gate.io/\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/gate-328x128.png\" alt=\"Gate\"></a>\n                        </li>\n                        <li class=\"list-inline-item\">\n                            <a href=\"https://www.hotbit.io/\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/hotbit-328x128.png\" alt=\"Hotbit\"></a>\n                        </li>\n\n                    </ul>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_JSplaceholders": [],
+          "_PHPplaceholders": [],
+          "_anchor": "extInfo1-2i",
+          "_isUserblock": true,
+          "_cid": "svKmbifNnD",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
@@ -2666,7 +2962,7 @@
           },
           "_name": "extMenu6",
           "_sourceTheme": "mobirise5",
-          "_customHTML": "<section class=\"extMenu6 menu\" group=\"Menu\" plugins=\"DropDown, TouchSwipe\" global always-top position-absolute once=\"menu\">\n\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Show Logo\" name=\"showLogo\" checked>\n        <input type=\"range\" title=\"Logo Size\" inline name=\"logoSize\" min=\"2\" max=\"8\" step=\"0.2\" value=\"2.8\" condition=\"showLogo\">\n        <input type=\"checkbox\" title=\"Show Brand Name\" name=\"showBrand\" checked>\n        <input type=\"checkbox\" title=\"Show Menu Items\" name=\"showItems\" checked>\n        <input type=\"checkbox\" title=\"Show Icons\" name=\"showIcons\">\n        <select title=\"Icons\" name=\"iconsAmount\" condition=\"showIcons\">\n            <option value=\"1\" selected>1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\">4</option>\n            <option value=\"5\">5</option>\n            <option value=\"6\">6</option>\n        </select>\n        <input type=\"checkbox\" title=\"Show Button(s)\" name=\"showButtons\">\n        <input type=\"checkbox\" title=\"Sticky\" name=\"sticky\" checked>\n        <input type=\"checkbox\" title=\"Collapsed\" name=\"collapsed\">\n        <input type=\"checkbox\" title=\"Transparent\" name=\"transparent\" checked>\n        <input type=\"color\" title=\"Hamburger Color\" name=\"hamburgerColor\" value=\"#ffffff\">\n        <input type=\"color\" title=\"Background Color\" name=\"menuBgColor\" value=\"#353535\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n\n\n    <nav class=\"navbar navbar-dropdown\" mbr-class=\"{'navbar-fixed-top':sticky,\n                    'navbar-expand-lg':!collapsed,\n                    'collapsed':collapsed}\">\n        <div class=\"navbar-brand\">\n            <span mbr-if=\"showLogo\" class=\"navbar-logo\">\n                <a href=\"https://mobiri.se\">\n                    <img src=\"@PROJECT_PATH@/assets/images/daosquare-v2-logo-nbg-1500-128x128.png\" alt=\"Mobirise\" mbr-style=\"{'height': logoSize + 'rem'}\">\n                </a>\n            </span>\n            <span mbr-if=\"showBrand\" mbr-buttons mbr-theme-style=\"display-7\" class=\"navbar-caption-wrap\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove\"><a class=\"navbar-caption text-white text-primary\" data-app-selector=\".navbar-caption\" href=\"index.html\" data-app-placeholder=\"Type Text\">DAOSquare</a></span>\n        </div>\n        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" mbr-if=\"showItems\">\n            <div class=\"hamburger\">\n                <span></span>\n                <span></span>\n                <span></span>\n                <span></span>\n            </div>\n        </button>\n        <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n            <ul mbr-menu class=\"navbar-nav nav-dropdown\" mbr-theme-style=\"display-4\" mbr-class=\"{'nav-right': !showButtons,'navbar-nav-top-padding': isPublish&&!showBrand&&!showLogo}\"><li class=\"nav-item\"><a class=\"nav-link link text-danger\" href=\"index.html\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\" aria-expanded=\"false\">\n                        HOME</a></li>\n                \n\n                <li class=\"nav-item\"><a class=\"nav-link link text-danger\" href=\"townhall.html\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\" aria-expanded=\"false\">TOWNHALL</a></li><li class=\"nav-item dropdown open\"><a class=\"nav-link link dropdown-toggle text-danger\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\" aria-expanded=\"true\" target=\"_blank\" data-toggle=\"dropdown-submenu\">PORTALS</a><div class=\"dropdown-menu\"><a class=\"dropdown-item text-danger\" href=\"https://daomap.io/\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\" aria-expanded=\"false\" target=\"_blank\">DAOmap</a><a class=\"dropdown-item text-danger text-primary\" href=\"https://whaledao.org/\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\" aria-expanded=\"false\" target=\"_blank\">WhaleDAO</a><a class=\"dropdown-item text-danger text-primary\" href=\"https://dao2.io/\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\" aria-expanded=\"false\" target=\"_blank\">dao2</a></div></li><li class=\"nav-item\"><a class=\"nav-link link text-danger\" href=\"https://forum.daosquare.io/\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\" aria-expanded=\"false\" target=\"_blank\">FORUM</a></li></ul>\n            <div mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\" class=\"navbar-buttons px-2 mbr-section-btn\"><a class=\"btn btn-sm btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Incubator</a></div>\n\n            <div class=\"icons-menu\" mbr-if=\"showIcons\">\n                <a href=\"https://mobiri.se\" target=\"_blank\">\n                    <span mbr-icon class=\"p-2 mbr-iconfont mobi-mbri-globe-2 mobi-mbri\" style=\"color: rgb(87, 70, 139); fill: rgb(87, 70, 139);\"></span>\n                </a>\n                <a href=\"https://mobiri.se\" target=\"_blank\" mbr-if=\"iconsAmount > 1\">\n                    <span mbr-icon class=\"p-2 mbr-iconfont mobi-mbri-phone mobi-mbri\" style=\"color: rgb(87, 70, 139); fill: rgb(87, 70, 139);\"></span>\n                </a>\n                <a href=\"https://mobiri.se\" target=\"_blank\" mbr-if=\"iconsAmount > 2\">\n                    <span mbr-icon class=\"p-2 mbr-iconfont mobi-mbri-globe-2 mobi-mbri\" style=\"color: rgb(87, 70, 139); fill: rgb(87, 70, 139);\"></span>\n                </a>\n                <a href=\"https://mobiri.se\" target=\"_blank\" mbr-if=\"iconsAmount > 3\">\n                    <span mbr-icon class=\"p-2 mbr-iconfont mobi-mbri-cash mobi-mbri\" style=\"color: rgb(242, 246, 255); fill: rgb(242, 246, 255);\"></span>\n                </a>\n                <a href=\"https://mobiri.se\" target=\"_blank\" mbr-if=\"iconsAmount > 4\">\n                    <span mbr-icon class=\"p-2 mbr-iconfont mobi-mbri-phone mobi-mbri\" style=\"color: rgb(242, 246, 255); fill: rgb(242, 246, 255);\"></span>\n                </a>\n                <a href=\"https://mobiri.se\" target=\"_blank\" mbr-if=\"iconsAmount > 5\">\n                    <span mbr-icon class=\"p-2 mbr-iconfont mobi-mbri-alert mobi-mbri\" style=\"color: rgb(255, 255, 255); fill: rgb(255, 255, 255);\"></span>\n                </a>\n            </div>\n\n        </div>\n    </nav>\n</section>",
+          "_customHTML": "<section class=\"extMenu6 menu\" group=\"Menu\" plugins=\"DropDown, TouchSwipe\" global always-top position-absolute once=\"menu\">\n\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Show Logo\" name=\"showLogo\" checked>\n        <input type=\"range\" title=\"Logo Size\" inline name=\"logoSize\" min=\"2\" max=\"8\" step=\"0.2\" value=\"2.8\" condition=\"showLogo\">\n        <input type=\"checkbox\" title=\"Show Brand Name\" name=\"showBrand\" checked>\n        <input type=\"checkbox\" title=\"Show Menu Items\" name=\"showItems\" checked>\n        <input type=\"checkbox\" title=\"Show Icons\" name=\"showIcons\">\n        <select title=\"Icons\" name=\"iconsAmount\" condition=\"showIcons\">\n            <option value=\"1\" selected>1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\">4</option>\n            <option value=\"5\">5</option>\n            <option value=\"6\">6</option>\n        </select>\n        <input type=\"checkbox\" title=\"Show Button(s)\" name=\"showButtons\">\n        <input type=\"checkbox\" title=\"Sticky\" name=\"sticky\" checked>\n        <input type=\"checkbox\" title=\"Collapsed\" name=\"collapsed\">\n        <input type=\"checkbox\" title=\"Transparent\" name=\"transparent\" checked>\n        <input type=\"color\" title=\"Hamburger Color\" name=\"hamburgerColor\" value=\"#ffffff\">\n        <input type=\"color\" title=\"Background Color\" name=\"menuBgColor\" value=\"#353535\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n\n\n    <nav class=\"navbar navbar-dropdown\" mbr-class=\"{'navbar-fixed-top':sticky,\n                    'navbar-expand-lg':!collapsed,\n                    'collapsed':collapsed}\">\n        <div class=\"navbar-brand\">\n            <span mbr-if=\"showLogo\" class=\"navbar-logo\">\n                <a href=\"https://mobiri.se\">\n                    <img src=\"@PROJECT_PATH@/assets/images/daosquare-v2-logo-nbg-1500-128x128.png\" alt=\"Mobirise\" mbr-style=\"{'height': logoSize + 'rem'}\">\n                </a>\n            </span>\n            <span mbr-if=\"showBrand\" mbr-buttons mbr-theme-style=\"display-7\" class=\"navbar-caption-wrap\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove\"><a class=\"navbar-caption text-white text-primary\" data-app-selector=\".navbar-caption\" href=\"index.html\" data-app-placeholder=\"Type Text\">DAOSquare</a></span>\n        </div>\n        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" mbr-if=\"showItems\">\n            <div class=\"hamburger\">\n                <span></span>\n                <span></span>\n                <span></span>\n                <span></span>\n            </div>\n        </button>\n        <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n            <ul mbr-menu class=\"navbar-nav nav-dropdown\" mbr-theme-style=\"display-4\" mbr-class=\"{'nav-right': !showButtons,'navbar-nav-top-padding': isPublish&&!showBrand&&!showLogo}\"><li class=\"nav-item\"><a class=\"nav-link link text-danger\" href=\"index.html\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\" aria-expanded=\"false\">\n                        HOME</a></li>\n                \n\n                <li class=\"nav-item\"><a class=\"nav-link link text-danger\" href=\"townhall.html\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\" aria-expanded=\"false\">TOWNHALL</a></li><li class=\"nav-item dropdown\"><a class=\"nav-link link dropdown-toggle text-danger\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\" aria-expanded=\"true\" target=\"_blank\" data-toggle=\"dropdown-submenu\">PORTALS</a><div class=\"dropdown-menu\"><a class=\"dropdown-item text-danger\" href=\"https://daomap.io/\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\" aria-expanded=\"false\" target=\"_blank\">DAOmap</a><a class=\"dropdown-item text-danger text-primary\" href=\"https://whaledao.org/\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\" aria-expanded=\"false\" target=\"_blank\">WhaleDAO</a><a class=\"dropdown-item text-danger text-primary\" href=\"https://dao2.io/\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\" aria-expanded=\"false\" target=\"_blank\">dao2</a></div></li><li class=\"nav-item\"><a class=\"nav-link link text-danger\" href=\"https://forum.daosquare.io/\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\" aria-expanded=\"false\" target=\"_blank\">FORUM</a></li></ul>\n            <div mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\" class=\"navbar-buttons px-2 mbr-section-btn\"><a class=\"btn btn-sm btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Incubator</a></div>\n\n            <div class=\"icons-menu\" mbr-if=\"showIcons\">\n                <a href=\"https://mobiri.se\" target=\"_blank\">\n                    <span mbr-icon class=\"p-2 mbr-iconfont mobi-mbri-globe-2 mobi-mbri\" style=\"color: rgb(87, 70, 139); fill: rgb(87, 70, 139);\"></span>\n                </a>\n                <a href=\"https://mobiri.se\" target=\"_blank\" mbr-if=\"iconsAmount > 1\">\n                    <span mbr-icon class=\"p-2 mbr-iconfont mobi-mbri-phone mobi-mbri\" style=\"color: rgb(87, 70, 139); fill: rgb(87, 70, 139);\"></span>\n                </a>\n                <a href=\"https://mobiri.se\" target=\"_blank\" mbr-if=\"iconsAmount > 2\">\n                    <span mbr-icon class=\"p-2 mbr-iconfont mobi-mbri-globe-2 mobi-mbri\" style=\"color: rgb(87, 70, 139); fill: rgb(87, 70, 139);\"></span>\n                </a>\n                <a href=\"https://mobiri.se\" target=\"_blank\" mbr-if=\"iconsAmount > 3\">\n                    <span mbr-icon class=\"p-2 mbr-iconfont mobi-mbri-cash mobi-mbri\" style=\"color: rgb(242, 246, 255); fill: rgb(242, 246, 255);\"></span>\n                </a>\n                <a href=\"https://mobiri.se\" target=\"_blank\" mbr-if=\"iconsAmount > 4\">\n                    <span mbr-icon class=\"p-2 mbr-iconfont mobi-mbri-phone mobi-mbri\" style=\"color: rgb(242, 246, 255); fill: rgb(242, 246, 255);\"></span>\n                </a>\n                <a href=\"https://mobiri.se\" target=\"_blank\" mbr-if=\"iconsAmount > 5\">\n                    <span mbr-icon class=\"p-2 mbr-iconfont mobi-mbri-alert mobi-mbri\" style=\"color: rgb(255, 255, 255); fill: rgb(255, 255, 255);\"></span>\n                </a>\n            </div>\n\n        </div>\n    </nav>\n</section>",
           "_cid": "srMXpOfqR4",
           "_anchor": "extMenu6-e",
           "_PHPplaceholders": [],
